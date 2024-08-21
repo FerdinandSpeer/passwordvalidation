@@ -24,4 +24,38 @@ class passwordValidationTest {
         boolean result = passwordValidation.passwordNumbers (password);
         assertTrue(result);
     }
+
+    @Test
+    void returnFalse_whenPasswordContainLetters (){
+        String password = "DasIstEinTest";
+        boolean result = passwordValidation.passwordNumbers (password);
+        assertFalse(result);
+    }
+    @Test
+    void returnTrue_whenPasswordContainUpperCases (){
+        String password = "DasIstEinTest";
+        boolean result = passwordValidation.passwordUpperCase (password);
+        assertTrue(result);
+    }
+
+    @Test
+    void returnFalse_whenPasswordContainUpperCases (){
+        String password = "dasisteintest";
+        boolean result = passwordValidation.passwordUpperCase (password);
+        assertFalse(result);
+    }
+
+    @Test
+    void returnTrue_whenPasswordContainLowerCases (){
+        String password = "DasIstEinTest";
+        boolean result = passwordValidation.passwordLowerCase (password);
+        assertTrue(result);
+    }
+
+    @Test
+    void returnFalse_whenPasswordContainLowerCases (){
+        String password = "DASISTEINTEST";
+        boolean result = passwordValidation.passwordLowerCase (password);
+        assertFalse(result);
+    }
 }

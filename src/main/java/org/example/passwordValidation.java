@@ -18,6 +18,24 @@ public class passwordValidation {
         }
         return false;
     }
+    //Zusätzlich möchtest du mit einer Methode sicherstellen, dass
+    // sowohl Groß- als auch Kleinbuchstaben im Passwort verwendet werden.
+    public static boolean passwordUpperCase(String password) {
+        for (int i = 0; i < password.length(); i++){
+            if (Character.isUpperCase(password.charAt(i))){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
+    public static boolean passwordLowerCase(String password) {
+        for (int i = 0; i < password.length(); i++){
+            if (Character.isLowerCase(password.charAt(i))){
+                return true;
+            }
+        }
+        return false;
+    }
 }
