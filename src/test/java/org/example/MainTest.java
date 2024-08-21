@@ -13,8 +13,15 @@ class passwordValidationTest {
     }
     @Test
     void returnFalse_whenPasswordLengthMax7 (){
-        String password = "12345678";
+        String password = "1234567";
         boolean result = passwordValidation.passwordLength(password);
+        assertFalse(result);
+    }
+
+    @Test
+    void returnTrue_whenPasswordContainNumbers (){
+        String password = "12345678";
+        boolean result = passwordValidation.passwordNumbers (password);
         assertTrue(result);
     }
 }
