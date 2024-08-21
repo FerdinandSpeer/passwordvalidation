@@ -4,6 +4,7 @@ public class passwordValidation {
     public static void main(String[] args) {
 
     }
+    //Hauptmethode, die alle Validierungen abfrägt
     public static boolean validatePassword(String password) {
         passwordCommon(password);
         passwordNumbers(password);
