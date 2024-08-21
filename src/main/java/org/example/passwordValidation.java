@@ -38,4 +38,26 @@ public class passwordValidation {
         }
         return false;
     }
+
+    //eine Methode sollte häufig verwendete Passwörter erkennen. Mit Hilfe eines Arrays
+
+    public static boolean passwordCommon(String password) {
+        String[] commonPasswords = {
+                "123456",
+                "password",
+                "123456789",
+                "12345678",
+                "12345",
+                "1234567",
+                "1234567890",
+                "qwerty",
+                "abc123",
+                "password1"};
+    for (String commonPassword : commonPasswords){
+        if (password.equals(commonPassword)){
+            return true;
+        }
+    }
+    return false;
+    }
 }

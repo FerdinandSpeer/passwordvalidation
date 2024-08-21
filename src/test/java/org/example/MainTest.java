@@ -58,4 +58,11 @@ class passwordValidationTest {
         boolean result = passwordValidation.passwordLowerCase (password);
         assertFalse(result);
     }
+
+    @Test
+    void returnTrue_whenPasswordIsCommon (){
+        String password = "12345678";
+        boolean result = passwordValidation.passwordCommon (password);
+        assertTrue(result);
+    }
 }
