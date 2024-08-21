@@ -6,5 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class passwordValidationTest {
     @Test
-    void
+    void returnTrue_whenPasswordLengthMin8 (){
+        String password = "12345678";
+        boolean result = passwordValidation.passwordLength(password);
+        assertTrue(result);
+    }
+    @Test
+    void returnFalse_whenPasswordLengthMax7 (){
+        String password = "12345678";
+        boolean result = passwordValidation.passwordLength(password);
+        assertTrue(result);
+    }
 }
