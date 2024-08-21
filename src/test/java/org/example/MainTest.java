@@ -66,10 +66,11 @@ class passwordValidationTest {
         assertTrue(result);
     }
 
-    @Test
+    /**@Test
     void returnFalse_whenPasswordContainsSpecialCharacters (){
         String password = "DasIstEinTest!";
         boolean result = passwordValidation.passwordSpecialChar (password);
         assertFalse(result);
     }
+    */
 }

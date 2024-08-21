@@ -68,8 +68,7 @@ public class passwordValidation {
     }
     return false;
     }
-//
-    public static boolean passwordSpecialChar(String password) {
+/**public static boolean passwordSpecialChar(String password) {
         char[] specialCharacters = {
                 '!', '#', '$', '%', '(', ')', '*', '+', ',', '-', '.', '/',
                 ':', ';', '=', '?', '@', '[', ']', '^', '_', '{', '|', '}', '~'};
@@ -81,4 +80,5 @@ public class passwordValidation {
         }
         return true;
     }
+ */
 }
