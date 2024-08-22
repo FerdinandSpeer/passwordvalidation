@@ -68,7 +68,14 @@ class passwordValidationTest {
 
     @Test
     void returnTrue_whenPasswordContainsSpecialCharacters (){
-        String password = "DasIst#!";
+        String password = "DasIstEinTest#!";
+        boolean result = passwordValidation.passwordSpecialChar (password);
+        assertTrue(result);
+    }
+
+    @Test
+    void returnTrue_whenPasswordContainsNoSpecialCharacters (){
+        String password = "DasIstEinTest";
         boolean result = passwordValidation.passwordSpecialChar (password);
         assertTrue(result);
     }
