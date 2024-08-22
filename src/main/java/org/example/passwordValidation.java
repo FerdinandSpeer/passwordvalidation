@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Random;
+
 public class passwordValidation {
     public static void main(String[] args) {
 
@@ -11,6 +13,7 @@ public class passwordValidation {
         passwordLowerCase(password);
         passwordUpperCase(password);
         passwordLength(password);
+        passwordSpecialChar(password);
 
         return true;
     }
@@ -84,5 +87,14 @@ public class passwordValidation {
         return true;
     }
 
+    public static String generateRandomPassword() {
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[]{}|;:,.<>?";
+        StringBuilder password = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < 8; i++) {
+            password.append(chars.charAt(random.nextInt(chars.length())));
+        }
+        return password.toString();
+    }
 
 }

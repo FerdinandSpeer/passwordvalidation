@@ -1,6 +1,9 @@
 package org.example;
 
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -79,5 +82,13 @@ class passwordValidationTest {
         boolean result = passwordValidation.passwordSpecialChar (password);
         assertTrue(result);
     }
+
+    @RepeatedTest(250)
+    void returnTrue_whenRandomPasswordIsSecure(){
+        String password = passwordValidation.generateRandomPassword();
+        boolean result = passwordValidation.validatePassword(password);
+        assertTrue(result);
+    }
+
 
 }
