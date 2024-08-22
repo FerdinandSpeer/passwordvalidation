@@ -68,17 +68,19 @@ public class passwordValidation {
     }
     return false;
     }
-/**public static boolean passwordSpecialChar(String password) {
+
+ public static boolean passwordSpecialChar(String password) {
         char[] specialCharacters = {
                 '!', '#', '$', '%', '(', ')', '*', '+', ',', '-', '.', '/',
                 ':', ';', '=', '?', '@', '[', ']', '^', '_', '{', '|', '}', '~'};
 
-        for (Character specialCh : specialCharacters){
-            if (password.contains(specialCh)){
+        String specialCharString = String.valueOf(specialCharacters);
+
+        for (Character specialChar : specialCharacters){
+            if (password.contains(specialCharString)){
                 return false;
             }
         }
         return true;
     }
- */
 }
